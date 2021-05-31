@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name" translatable="false">JaSSTaXi</string>
+    <string name="welcome" translatable="false">WELCOME</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="sozlamalar">Settings</string>
+    <string name="tungi_rejim">Night mode</string>
+    <string name="buyurtmalar">Orders</string>
+    <string name="taksometr">Taximeter</string>
+    <string name="buyurtmalar_tarixi">Order history</string>
+    <string name="hisobni_to_ldirish">Paynet</string>
+    <string name="sanatoriya">Sanatorium</string>
+    <string name="markaz">Center</string>
+    <string name="qirgiz_mahalla">Qirgiz mahalla</string>
+    <string name="baynal">Baynal</string>
+    <string name="karoskon">Karoskon</string>
+    <string name="sada">Sada</string>
+    <string name="gez">Gez</string>
+    <string name="laskidon">Laskidon</string>
+    <string name="keskanyor">Keskanyor</string>
+    <string name="beshkapa">Beshkapa</string>
+    <string name="muchum">Muchum</string>
+    <string name="oyqiron">Oyqiron</string>
+    <string name="chortoq_buyurtmalar">Chortoq Buyurtmalar</string>
+    <string name="city">City</string>
+    <string name="to_send">TO SEND</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">LOGIN</string>
+    <string name="or">OR</string>
+    <string name="new_user_register_now">NEW USER? REGISTER NOW</string>
+    <string name="pay_net">Pay Net</string>
+    <string name="card_number">Card Number</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="verify">Verify</string>
+    <string name="_998_xxxxxxxxx">+998 XXXXXXXXX</string>
+    <string name="register">REGISTER</string>
+    <string name="distance">Distance:</string>
+    <string name="summa">Summa:</string>
+    <string name="_5000_so_m">5000 So\'m</string>
+    <string name="start">Start</string>
+    <string name="vaqt">Vaqt:</string>
+    <string name="stop">Stop</string>
+    <string name="_16_km">16 km</string>
+    <string name="_01_01_55">01:01:55</string>
+    <string name="tilni_o_zagartirish">Change language</string>
+    <string name="sozlama">Sozlama</string>
+    <string name="forgot_passwor">Forgot passwor?</string>
+    <string name="username">Username</string>
+    <string name="verifycode">Verifycode</string>
+    <string name="night_mode">Night mode</string>
+    <string name="change_language">Change Language</string>
+    <string name="log_out">Log out</string>
+    <string name="_0_km_s">0 km/s</string>
+    <string name="speed">Speed</string>
+    <string name="_0_km">0 km</string>
+    <string name="pauze">Pauze</string>
+
+
+</resources>

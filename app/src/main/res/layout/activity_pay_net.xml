@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payNet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qora"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="57dp">
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/ic__"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_qale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="-6dp" />
+
+        <EditText
+            android:id="@+id/phonnumber"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/round_yellow"
+            android:drawableStart="@drawable/ic_baseline_credit_card_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="@string/card_number"
+            android:inputType="phone"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view3"
+            tools:ignore="MissingConstraints,RtlCompat" />
+
+        <EditText
+            android:id="@+id/passwordnum"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_yellow"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintLeft_toLeftOf="@id/phonnumber"
+            app:layout_constraintRight_toRightOf="@id/phonnumber"
+            app:layout_constraintTop_toBottomOf="@id/phonnumber" />
+
+        <Button
+            android:id="@+id/boshOynaBtn"
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/round_radius"
+            android:gravity="center"
+            android:text="@string/pay_now"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/passwordnum"
+            app:layout_constraintRight_toRightOf="@id/passwordnum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordnum"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

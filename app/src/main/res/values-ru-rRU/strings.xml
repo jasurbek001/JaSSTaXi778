@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">JaSSTaXi</string>
+    <string name="welcome" translatable="false">Добро пожаловатъ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sozlamalar">Настройки</string>
+    <string name="tungi_rejim">Ночной режим</string>
+    <string name="buyurtmalar">ЗАКАЗЫ</string>
+    <string name="taksometr">ТАКСОМЕТР</string>
+    <string name="buyurtmalar_tarixi">ИСТОРИЯ ЗАКАЗОВ</string>
+    <string name="hisobni_to_ldirish">Пополнить счет</string>
+    <string name="sanatoriya">Санаторий</string>
+    <string name="markaz">Центр</string>
+    <string name="qirgiz_mahalla">Кыргызский район</string>
+    <string name="baynal">Байнал</string>
+    <string name="karoskon">Кароскон</string>
+    <string name="sada">Сада</string>
+    <string name="gez">Гез</string>
+    <string name="laskidon">Ласкидон</string>
+    <string name="keskanyor">Кесканёр</string>
+    <string name="beshkapa">Бещкапа</string>
+    <string name="muchum">Мучум</string>
+    <string name="oyqiron">Ойкирон</string>
+    <string name="chortoq_buyurtmalar">Чартак Приказы</string>
+    <string name="city">ГОРОДА</string>
+    <string name="to_send">Отправил</string>
+    <string name="password">Пароль</string>
+    <string name="new_password">Новый парольn </string>
+    <string name="phone_number">Телефонный номер</string>
+    <string name="forgot_password">Забыли Ваш пароль?</string>
+    <string name="sign_in">Входить</string>
+    <string name="login">Вступление</string>
+    <string name="or">или</string>
+    <string name="new_user_register_now">Зарегистрироваться</string>
+    <string name="pay_net">Платить</string>
+    <string name="card_number">Платить</string>
+    <string name="pay_now">Заплатить сейчас</string>
+    <string name="verify_code">Код отправлен</string>
+    <string name="verify">Код</string>
+    <string name="_998_xxxxxxxxx">+998 XXXXXXXXX</string>
+    <string name="register">РЕГИСТР</string>
+    <string name="distance">Длина:</string>
+    <string name="summa">Сумма:</string>
+    <string name="_5000_so_m">5000 Сумма</string>
+    <string name="start">Начать</string>
+    <string name="vaqt">Время:</string>
+    <string name="stop">Стоп</string>
+    <string name="_16_km">16 Км</string>
+    <string name="_01_01_55">01:01:55</string>
+    <string name="tilni_o_zagartirish">Изменить язык</string>
+    <string name="sozlama">Sozlama</string>
+    <string name="forgot_passwor">Forgot passwor?</string>
+    <string name="username">Username</string>
+    <string name="verifycode">Verifycode</string>
+    <string name="night_mode">Ночные режим</string>
+    <string name="log_out">Выход</string>
+    <string name="_0_km_s">0 км/с</string>
+    <string name="speed">Cкорость</string>
+    <string name="_0_km">0 км</string>
+    <string name="pauze">Пауза</string>
+
+
+</resources>

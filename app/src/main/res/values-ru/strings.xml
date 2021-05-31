@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="forgot_passwor">Forgot passwor?</string>
+    <string name="username">Username</string>
+    <string name="verifycode">Verifycode</string>
+    <string name="_998_xxxxxxxxx">+998 XXXXXXXXX</string>
+    <string name="night_mode">Night mode</string>
+    <string name="log_out">Log out</string>
+</resources>

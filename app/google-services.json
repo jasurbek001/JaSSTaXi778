@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "585222605925",
+    "firebase_url": "https://fir-taxi-36dac-default-rtdb.firebaseio.com",
+    "project_id": "fir-taxi-36dac",
+    "storage_bucket": "fir-taxi-36dac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585222605925:android:d163ff987d433cabe14a8c",
+        "android_client_info": {
+          "package_name": "com.example.myapplicationfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585222605925-3tprlodm6brqlaftan9o225iudq2dmml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJLkX3KOKq_l7iEHHSzNP4trCilzcNNBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585222605925-3tprlodm6brqlaftan9o225iudq2dmml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
