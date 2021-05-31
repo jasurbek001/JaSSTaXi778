@@ -51,4 +51,9 @@ class MainActivity : AppCompatActivity(), Runnable {
         var intent = Intent(this,AsosiyQism::class.java)
         startActivity(intent)
     }
+
+    override fun onResume() {
+        super.onResume()
+        finish()
+    }
 }
