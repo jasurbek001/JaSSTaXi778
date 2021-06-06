@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.ActionBar
 import com.example.jasstaxi.databinding.ActivityCityOynaBinding
 
 class CityOyna : AppCompatActivity() {
@@ -14,9 +15,12 @@ class CityOyna : AppCompatActivity() {
     private lateinit var btnt: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         binding = ActivityCityOynaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val actionBar = supportActionBar
+        actionBar!!.title = "Shaharlar"
 
         btnch = findViewById(R.id.chortoq_btn)
         btnch.setOnClickListener {  val intent = Intent(this, Buyurtma::class.java)

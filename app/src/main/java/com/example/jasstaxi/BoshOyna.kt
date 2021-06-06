@@ -20,10 +20,7 @@ class BoshOyna : AppCompatActivity() {
 
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-
-
         setContentView(R.layout.activity_bosh_oyna)
 
         sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
@@ -37,13 +34,17 @@ class BoshOyna : AppCompatActivity() {
 
 
 
+
         button = Button(this)
         button = findViewById(R.id.button3)
         button.setOnClickListener { startActivity(Intent(this, CityOyna::class.java)) }
 
         button = Button(this)
         button = findViewById(R.id.button4)
-        button.setOnClickListener { startActivity(Intent(this, taksoMetr::class.java)) }
+
+        val intent = Intent(this, TaksoMetr::class.java)
+        intent.putExtra("aaa","0")
+        button.setOnClickListener {startActivity(intent)}
 
         button = Button(this)
         button = findViewById(R.id.button6)
@@ -60,7 +61,6 @@ class BoshOyna : AppCompatActivity() {
     }
 
     override fun onRestart() {
-
         super.onRestart()
         loadLocate()
         recreate()
@@ -87,4 +87,8 @@ class BoshOyna : AppCompatActivity() {
         setLocate(language.toString())
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }

@@ -2,23 +2,25 @@ package com.example.jasstaxi
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.location.Location
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.text.TextUtils
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jasstaxi.databinding.ActivityBuyurtmaBinding
+import com.example.jasstaxi.databinding.BottomsheetLayoutBinding
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_buyurtma.*
 import kotlinx.android.synthetic.main.list_layout.*
@@ -57,7 +59,7 @@ class Buyurtma : AppCompatActivity(),IBagLokatsiya {
     }
     private var PERMISSION_LOCATION: Int = 0
 
-    lateinit var binding: ActivityBuyurtmaBinding
+    lateinit var binding: com.example.jasstaxi.databinding.ActivityBuyurtmaBinding
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,7 +91,7 @@ class Buyurtma : AppCompatActivity(),IBagLokatsiya {
         val dividerItemDecoration = DividerItemDecoration(buyurt.context, layoutManager.orientation)
         buyurt.addItemDecoration(dividerItemDecoration)
 
-        adapter = MyAdapter(this)
+        adapter = MyAdapter(this@Buyurtma)
         buyurt.adapter = adapter
 
         getBuyurtma()
@@ -145,7 +147,7 @@ class Buyurtma : AppCompatActivity(),IBagLokatsiya {
                         for (snapShot in snapshot.children)
                             buyurList.add(snapShot.getValue(BuyurtmaOlish::class.java)!!)
 
-                        last_node = buyurList[buyurList.size - 1].numberPhone.toString()
+                        last_node = buyurList[buyurList.size - 1].numberPhone
 
                         adapter.add(buyurList)
                         isLoading = false
@@ -164,10 +166,9 @@ class Buyurtma : AppCompatActivity(),IBagLokatsiya {
         }
     }
 
-
     private fun getLastKey() {
         val get_last_key: Query = FirebaseDatabase.getInstance()
-            .getReference().child("Users")
+            .reference.child("Users")
             .orderByKey().limitToLast(1)
 
         get_last_key.addListenerForSingleValueEvent(object : ValueEventListener {

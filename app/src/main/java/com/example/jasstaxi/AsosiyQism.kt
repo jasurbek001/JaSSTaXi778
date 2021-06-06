@@ -33,7 +33,6 @@ class AsosiyQism : AppCompatActivity() {
             if (isLogin) {
                 val intent = Intent(this@AsosiyQism, BoshOyna::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
@@ -44,6 +43,8 @@ class AsosiyQism : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         phonnum = findViewById(R.id.phonnumber)
         pasnum = findViewById(R.id.passwordnum)
+
+
         button = Button(this)
         button = findViewById(R.id.boshOynaBtn)
         button.setOnClickListener { login()}
@@ -102,5 +103,14 @@ class AsosiyQism : AppCompatActivity() {
         })
 
     }
+
+
+    override fun onBackPressed() {
+        finish()
+    }
+
+
+
+
 }
 

@@ -6,4 +6,7 @@
     <string name="_998_xxxxxxxxx">+998 XXXXXXXXX</string>
     <string name="night_mode">Night mode</string>
     <string name="log_out">Log out</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="haqiqatdan_ham_boshlashni_hohlaysizmi">Haqiqatdan ham boshlashni hohlaysizmi?</string>
 </resources>

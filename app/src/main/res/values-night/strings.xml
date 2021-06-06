@@ -58,4 +58,7 @@
     <string name="speed">Speed</string>
     <string name="_0_km">0 km</string>
     <string name="pauze">Pauze</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="haqiqatdan_ham_boshlashni_hohlaysizmi">Haqiqatdan ham boshlashni hohlaysizmi?</string>
 </resources>

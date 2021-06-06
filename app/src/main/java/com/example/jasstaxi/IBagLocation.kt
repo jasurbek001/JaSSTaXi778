@@ -20,5 +20,4 @@ interface IBagLocation : LocationListener, GpsStatus.Listener {
     override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?)
 
 
-
 }

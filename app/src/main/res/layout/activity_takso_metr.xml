@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".taksoMetr">
+    tools:context=".TaksoMetr">
+
+    <TextView
+        android:id="@+id/kutishvaqt"
+        android:layout_width="236dp"
+        android:layout_height="99dp"
+        android:text="00:00"
+        android:textColor="@color/green"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10"
+        app:layout_constraintVertical_bias="0.3" />
 
     <View
         android:id="@+id/view11"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/ic__"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="-8dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:textColor="@color/green"
         android:id="@+id/pauzebtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
@@ -60,7 +76,7 @@
         app:layout_constraintVertical_bias="0.329" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/summaT"
         android:layout_width="118dp"
         android:layout_height="45dp"
         android:text="@string/summa"
@@ -90,7 +106,7 @@
         app:layout_constraintVertical_bias="0.538" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/distT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/distance"
@@ -104,8 +120,9 @@
         app:layout_constraintTop_toBottomOf="@+id/view10"
         app:layout_constraintVertical_bias="0.239" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startbtn"
+        android:textColor="@color/green"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:background="@drawable/round_radius"
@@ -135,7 +152,7 @@
         app:layout_constraintVertical_bias="0.329" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/vaqtT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vaqt"
@@ -150,7 +167,7 @@
         app:layout_constraintVertical_bias="0.431" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/vaqttxt"
         android:layout_width="145dp"
         android:layout_height="39dp"
         android:text="00:00"
@@ -164,11 +181,11 @@
         app:layout_constraintTop_toBottomOf="@+id/view10"
         app:layout_constraintVertical_bias="0.42" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/stopbtn"
+        android:textColor="@color/green"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:layout_marginTop="300dp"
         android:background="@drawable/round_radius"
         android:text="@string/stop"
         android:textSize="15sp"
@@ -178,21 +195,23 @@
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.667" />
 
     <View
         android:id="@+id/view10"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/ic_qale"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/callphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/round_radius"
         android:text="Call Number"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="@+id/view11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"

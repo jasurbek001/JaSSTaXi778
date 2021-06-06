@@ -18,18 +18,19 @@
         android:theme="@style/Theme.JaSSTaXi"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".AsosiyQism"></activity>
-        <activity android:name=".Malumotlar" />
-        <activity android:name=".TarxiBuyurtma" />
-        <activity android:name=".Settings" />
-        <activity android:name=".forgotPassword" />
-        <activity android:name=".Buyurtma" />
-        <activity android:name=".CityOyna" />
-        <activity android:name=".payNet" />
-        <activity android:name=".taksoMetr" />
-        <activity android:name=".RegisterOyna" />
-        <activity android:name=".BoshOyna" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".AsosiyQism" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Malumotlar" android:screenOrientation="portrait"/>
+        <activity android:name=".TarxiBuyurtma" android:screenOrientation="portrait"/>
+        <activity android:name=".Settings" android:screenOrientation="portrait"/>
+        <activity android:name=".forgotPassword" android:screenOrientation="portrait"/>
+        <activity android:name=".Buyurtma" android:screenOrientation="portrait"/>
+        <activity android:name=".CityOyna" android:screenOrientation="portrait" />
+        <activity android:name=".payNet" android:screenOrientation="portrait"/>
+        <activity android:name=".TaksoMetr" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterOyna" android:screenOrientation="portrait"/>
+        <activity android:name=".BoshOyna" android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

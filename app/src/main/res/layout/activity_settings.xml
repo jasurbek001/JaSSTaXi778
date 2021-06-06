@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logoutbtn"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/round_radius"
         android:text="@string/log_out"
+        android:textColor="@color/green"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view29"
@@ -22,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tilbtn"
         app:layout_constraintVertical_bias="0.227" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/textbtn"
         android:layout_width="280dp"
         android:layout_height="55dp"
@@ -30,6 +31,7 @@
         android:layout_marginBottom="352dp"
         android:background="@drawable/round_radius"
         android:text="@string/night_mode"
+        android:textColor="@color/green"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view29"
@@ -56,11 +58,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tilbtn"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/green"
         android:layout_marginBottom="232dp"
         android:background="@drawable/round_radius"
         android:text="@string/change_language"

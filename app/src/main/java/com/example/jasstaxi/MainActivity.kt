@@ -20,10 +20,13 @@ class MainActivity : AppCompatActivity(), Runnable {
     private var splash: Int = 3000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
+
 
         setContentView(R.layout.activity_asosiy_qism)
 
@@ -51,9 +54,9 @@ class MainActivity : AppCompatActivity(), Runnable {
         var intent = Intent(this,AsosiyQism::class.java)
         startActivity(intent)
     }
-
-    override fun onResume() {
-        super.onResume()
+    override fun onRestart() {
+        super.onRestart()
         finish()
     }
+
 }

@@ -6,49 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".BoshOyna">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_radius"
-        android:text="@string/buyurtmalar_tarixi"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button7"
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_goneMarginTop="15dp"
+        android:id="@+id/button4"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/round_radius"
-        android:text="@string/sozlamalar"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_radius"
         android:text="@string/taksometr"
         android:textSize="20sp"
+        android:textColor="@color/green"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:textColor="@color/green"
+        app:layout_goneMarginTop="15dp"
         android:id="@+id/button6"
         android:layout_width="280dp"
         android:layout_height="55dp"
@@ -62,13 +38,47 @@
         app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.012" />
+        app:layout_constraintVertical_bias="0.015" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_goneMarginTop="15dp"
+        android:textColor="@color/green"
+        android:id="@+id/button7"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_radius"
+        android:text="@string/sozlamalar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_goneMarginTop="15dp"
+        android:id="@+id/button5"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_radius"
+        android:text="@string/buyurtmalar_tarixi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:textColor="@color/green"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_goneMarginTop="15dp"
         android:id="@+id/button3"
         android:layout_width="280dp"
         android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="128dp"
         android:background="@drawable/round_radius"
         android:text="@string/buyurtmalar"
         android:textSize="20sp"
@@ -76,21 +86,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        android:textColor="@color/green"
+        />
 
     <View
         android:id="@+id/view4"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/ic_qale"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view16"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/ic__"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp" />
