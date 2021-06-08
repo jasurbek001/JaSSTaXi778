@@ -1,0 +1,6 @@
+<root>
+    <item
+        name='android.content.SharedPreferences.Editor android.content.SharedPreferences.Editor putStringSet(java.lang.String, java.util.Set&lt;java.lang.String&gt;) 1'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

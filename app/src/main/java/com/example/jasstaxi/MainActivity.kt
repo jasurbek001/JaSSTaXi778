@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), Runnable {
     private lateinit var text: TextView
     private lateinit var text1: TextView
     private var splash: Int = 3000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity(), Runnable {
         text.animation = bottomAnim
         text1.animation = bottomAnim
 
-        var handeler: Handler = Handler()
+        var handeler = Handler()
+
 
         handeler.post {
             handeler.postDelayed(this@MainActivity, splash.toLong())
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity(), Runnable {
         var intent = Intent(this,AsosiyQism::class.java)
         startActivity(intent)
     }
+
     override fun onRestart() {
         super.onRestart()
         finish()

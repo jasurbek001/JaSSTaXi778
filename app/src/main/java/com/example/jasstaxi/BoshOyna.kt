@@ -2,6 +2,7 @@ package com.example.jasstaxi
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.StatusBarManager
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -16,24 +17,22 @@ import java.util.*
 class BoshOyna : AppCompatActivity() {
     private lateinit var button: Button
     private lateinit var sharedPreferences: SharedPreferences
-    var isNightModeOn = false
-
+    private var isNightModeOn = false
     @SuppressLint("RestrictedApi")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bosh_oyna)
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
         isNightModeOn = sharedPreferences.getBoolean("NightMode", false)
 
-        if (isNightModeOn) {
+        if (isNightModeOn)
+        {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
+        } else
+        {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-
-
-
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_bosh_oyna)
 
         button = Button(this)
         button = findViewById(R.id.button3)
@@ -58,12 +57,6 @@ class BoshOyna : AppCompatActivity() {
         button.setOnClickListener { startActivity(Intent(this, TarxiBuyurtma::class.java)) }
 
 
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        loadLocate()
-        recreate()
     }
 
     private fun setLocate(Lang: String) {

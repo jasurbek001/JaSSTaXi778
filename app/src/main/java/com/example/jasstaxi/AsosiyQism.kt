@@ -20,24 +20,21 @@ class AsosiyQism : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     lateinit var firebaseAuth: FirebaseAuth
     var isLogin = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+            sharedPreferences = getSharedPreferences("LogIn", Context.MODE_PRIVATE)
         val stringExtra = intent.getStringExtra("abd")
 
-
         if(stringExtra != "000") {
-            sharedPreferences = getSharedPreferences("LogIn", Context.MODE_PRIVATE)
             isLogin = sharedPreferences.getBoolean("", false)
             if (isLogin) {
                 val intent = Intent(this@AsosiyQism, BoshOyna::class.java)
                 startActivity(intent)
             }
         }
-
-
-
 
 
         firebaseAuth = FirebaseAuth.getInstance()
@@ -76,7 +73,7 @@ class AsosiyQism : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists())
                 {
-                    val code: String = snapshot.child(phone).child("password").getValue().toString()
+                    val code: String = snapshot.child(phone).child("password").value.toString()
 
                     if(code == pasword)
                     {
@@ -104,13 +101,9 @@ class AsosiyQism : AppCompatActivity() {
 
     }
 
-
-    override fun onBackPressed() {
+    override fun onResume() {
+        super.onResume()
         finish()
     }
-
-
-
-
 }
 

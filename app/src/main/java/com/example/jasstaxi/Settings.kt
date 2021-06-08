@@ -9,45 +9,55 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
-import com.google.firebase.auth.FirebaseAuth
+import com.mahfa.dnswitch.DayNightSwitch
 import java.util.*
 
 @Suppress("DEPRECATION")
 class Settings : AppCompatActivity() {
 
     private lateinit var btn: Button
-    private lateinit var switch: Button
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    private lateinit var switch: DayNightSwitch
     private lateinit var outbtn: Button
     private lateinit var sharedPreferences: SharedPreferences
 
+    private var isNightModeOn = false
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
+        isNightModeOn = sharedPreferences.getBoolean("NightMode", false)
+
+        if (isNightModeOn) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         super.onCreate(savedInstanceState)
 
         loadLocate()
 
         setContentView(R.layout.activity_settings)
-        switch = findViewById(R.id.textbtn)
+        switch = findViewById(R.id.nightSwitch)
         outbtn = findViewById(R.id.logoutbtn)
 
         val appSettingsPref: SharedPreferences =
             getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
         val isNightModeOn: Boolean = appSettingsPref.getBoolean("NightMode", false)
         val sharedPreferesEdit: SharedPreferences.Editor = appSettingsPref.edit()
+        sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
 
-        switch.setOnClickListener {
+        this.isNightModeOn = sharedPreferences.getBoolean("NightMode", false)
+
+
+        switch.setListener {
             if (isNightModeOn) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                sharedPreferesEdit.putBoolean("NightMode", false)
+                sharedPreferesEdit.putBoolean("NightMode", true)
                 sharedPreferesEdit.apply()
             } else {
-
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                sharedPreferesEdit.putBoolean("NightMode", true)
+                sharedPreferesEdit.putBoolean("NightMode", false)
                 sharedPreferesEdit.apply()
             }
         }
