@@ -8,8 +8,9 @@ import android.view.View
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import android.widget.TextView
+import com.example.jasstaxi.ui.AsosiyQism
+import kotlinx.android.synthetic.main.activity_asosiy_qism.*
 
 class MainActivity : AppCompatActivity(), Runnable {
     private lateinit var topAnim: Animation
@@ -26,25 +27,18 @@ class MainActivity : AppCompatActivity(), Runnable {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-
-
-
         setContentView(R.layout.activity_asosiy_qism)
 
-        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_anim)
-        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim)
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim)
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.top_anim)
 
         image = findViewById(R.id.carimage)
-        text = findViewById(R.id.txtchiq)
-        text1 = findViewById(R.id.txtchiq2)
+
 
         image.animation = topAnim
-        text.animation = bottomAnim
-        text1.animation = bottomAnim
+        moshina.animation = bottomAnim
 
-        var handeler = Handler()
-
-
+        val handeler = Handler()
         handeler.post {
             handeler.postDelayed(this@MainActivity, splash.toLong())
 
@@ -53,7 +47,7 @@ class MainActivity : AppCompatActivity(), Runnable {
     }
 
     override fun run() {
-        var intent = Intent(this,AsosiyQism::class.java)
+        val intent = Intent(this, AsosiyQism::class.java)
         startActivity(intent)
     }
 

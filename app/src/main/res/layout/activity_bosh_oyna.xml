@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BoshOyna">
+    tools:context=".ui.BoshOyna"
+    android:background="@color/black">
 
     <androidx.appcompat.widget.AppCompatButton
         app:layout_goneMarginTop="15dp"

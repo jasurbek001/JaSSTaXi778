@@ -63,5 +63,16 @@
     <string name="ok">Ok</string>
     <string name="haqiqatdan_ham_boshlashni_hohlaysizmi">Haqiqatdan ham boshlashni hohlaysizmi?</string>
 
+    <string-array name="avtoTur">
+        <item>Nexia 1</item>
+        <item>Nexia 2</item>
+        <item>Nexia 3</item>
+        <item>Lacetti</item>
+        <item>Cobalt</item>
+        <item>Matiz</item>
+        <item>Damas</item>
+        <item>Spark</item>
+        <item>Cobalt</item>
+    </string-array>
 
 </resources>

@@ -4,80 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/qora"
+    android:background="@drawable/bosh_back"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kimdir"
+        android:visibility="gone"
+        android:id="@+id/xotira"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
     <View
-        android:id="@+id/view14"
-        android:layout_width="421dp"
-        android:layout_height="50dp"
-        android:background="@drawable/ic__"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        android:background="@drawable/ic_qale"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/logo_view"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/logoda"
+        app:layout_constraintLeft_toLeftOf="@id/gui_left"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/phonnumber"
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/round_radius"
-        android:drawableStart="@drawable/ic_baseline_local_phone_24"
-        android:drawablePadding="15dp"
-        android:ems="10"
-        android:hint="@string/phone_number"
-        android:inputType="phone"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        tools:ignore="MissingConstraints,RtlCompat" />
-
-    <EditText
-        android:id="@+id/passwordnum"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/round_radius"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="10dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonnumber" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/boshOynaBtn"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/round_yellow"
-        android:text="@string/login"
-        android:textSize="24sp"
+        android:layout_height="65dp"
+        android:text="Biz bilan hamkorlik qiling va qulay pul toping!"
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/green"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordnum"
-        app:layout_constraintVertical_bias="0.214" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintTop_toTopOf="@+id/logo_view"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/orta_view"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/round_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/reg_kir"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="200dp"
+        android:text="Ro'yhatdan o'tish"
+        android:textColor="#1B1B1B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@+id/gui_right"
+        app:layout_constraintTop_toTopOf="@+id/kirish"
+        app:layout_constraintLeft_toLeftOf="@+id/kirish_txt2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/kirish_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="80dp"
+        android:text="Yangi foydalanuvchimisiz?"
+        android:textColor="#1B1B1B"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintTop_toTopOf="@+id/kirish"
+        app:layout_constraintRight_toRightOf="@+id/reg_kir"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/kirish_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Profilga kirish"
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintTop_toTopOf="@+id/orta_view"
+        tools:ignore="MissingConstraints" />
+
+
+
 
     <ProgressBar
         android:id="@+id/progressBar4"
@@ -90,57 +113,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="209dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="@string/new_user_register_now"
-        android:textColor="@color/green"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-thin"
-        app:layout_constraintBottom_toBottomOf="@+id/view14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.064"
-        tools:ignore="MissingConstraints,OnClick" />
+
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="249dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:fontFamily="sans-serif-thin"
-        android:text="@string/forgot_password"
-        android:textColor="@color/green"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordnum"
-        app:layout_constraintVertical_bias="0.432"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="36dp"
+        android:id="@+id/phon_txt"
+        android:layout_width="163dp"
         android:layout_height="26dp"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:fontFamily="sans-serif-thin"
-        android:text="@string/or"
-        android:textColor="@color/green"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginTop="40dp"
+        android:text="@string/phone_number"
+        android:textColor="@color/qora"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintTop_toTopOf="@+id/kirish_txt"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/tel_png"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintRight_toRightOf="@+id/gui_right"
+        app:layout_constraintTop_toTopOf="@+id/phon_txt"
+        tools:ignore="MissingConstraints,RtlCompat" />
+    <TextView
+        android:id="@+id/pasword_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="15sp"
+        android:textColor="@color/qora"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/pass_png"
+        android:ems="10"
+        android:inputType="numberPassword"
+        app:layout_constraintLeft_toLeftOf="@+id/gui_left"
+        app:layout_constraintRight_toRightOf="@id/gui_right"
+        app:layout_constraintTop_toTopOf="@id/pasword_txt"
+        tools:ignore="RtlCompat" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kirish"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_radius"
+        android:text="@string/login"
+        android:textColor="@color/oq"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/gui_left"
+        app:layout_constraintRight_toRightOf="@+id/gui_right"
+        app:layout_constraintTop_toTopOf="@+id/password_edit"
+        android:layout_marginTop="60dp"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

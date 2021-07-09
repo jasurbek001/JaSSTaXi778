@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings">
+    tools:context=".ui.Settings"
+    android:background="@color/black">
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="match_parent"
@@ -13,21 +14,6 @@
         app:layout_constraintGuide_percent="0.15"
         android:id="@+id/guideHor"/>
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logoutbtn"
-        android:layout_width="280dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/round_radius"
-        android:text="@string/log_out"
-        android:textColor="@color/green"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@id/tilbtn"
-        app:layout_constraintRight_toRightOf="@id/tilbtn"
-        app:layout_constraintTop_toTopOf="@id/tilbtn" />
 
     <View
         android:id="@+id/view29"
@@ -47,42 +33,55 @@
         tools:layout_editor_absoluteX="0dp"
         tools:ignore="MissingConstraints" />
 
+    <!--    <com.mahfa.dnswitch.DayNightSwitch-->
+<!--        android:layout_width="76dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        app:layout_constraintTop_toTopOf="@id/guideHor"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="@id/textView6"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginLeft="200dp"-->
+<!--        android:id="@+id/nightSwitch"/>-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nightmode"
+        android:layout_width="281dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/round_radius"
+        android:text="DayNightMode"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideHor" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tilbtn"
         android:layout_width="280dp"
         android:layout_height="55dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="104dp"
         android:background="@drawable/round_radius"
         android:text="@string/change_language"
         android:textColor="@color/green"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintLeft_toLeftOf="@id/textView6"
-        app:layout_constraintRight_toRightOf="@id/textView6"
-        app:layout_constraintTop_toTopOf="@id/textView6" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/nightmode"
+        app:layout_constraintRight_toRightOf="@id/nightmode"
+        app:layout_constraintTop_toTopOf="@id/nightmode" />
 
-    <com.mahfa.dnswitch.DayNightSwitch
-        android:layout_width="76dp"
-        android:layout_height="40dp"
-        app:layout_constraintTop_toTopOf="@id/guideHor"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@id/textView6"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="200dp"
-        android:id="@+id/nightSwitch"/>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
-        android:text="DayNightMode"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutbtn"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/round_radius"
+        android:text="@string/log_out"
         android:textColor="@color/green"
-        android:textSize="28dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.274"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideHor" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/tilbtn"
+        app:layout_constraintRight_toRightOf="@id/tilbtn"
+        app:layout_constraintTop_toTopOf="@id/tilbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

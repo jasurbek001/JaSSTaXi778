@@ -4,219 +4,266 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaksoMetr">
+    android:background="@drawable/bg"
+    tools:context=".ui.TaksoMetr"
+    android:id="@+id/takso_metr">
 
-    <TextView
-        android:id="@+id/kutishvaqt"
-        android:layout_width="236dp"
-        android:layout_height="99dp"
-        android:text="00:00"
-        android:textColor="@color/green"
-        android:textSize="80sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ong_gui"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".15"/>
 
-    <View
-        android:id="@+id/view11"
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chap_gui"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        />
+    <include
+        layout="@layout/toolbar"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@drawable/ic__"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-8dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:textColor="@color/green"
-        android:id="@+id/pauzebtn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:background="@drawable/round_radius"
-        android:text="@string/pauze"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/asosiy"
+        app:layout_constraintLeft_toLeftOf="@+id/ong_gui"
+        app:layout_constraintRight_toRightOf="@id/chap_gui"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+    <View
+        android:id="@+id/aylana"
+        android:layout_width="228dp"
+        android:layout_height="230dp"
+        android:background="@drawable/aylana"
+        app:layout_constraintRight_toRightOf="@id/asosiy"
+        app:layout_constraintLeft_toLeftOf="@id/asosiy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pul"
+        app:layout_constraintRight_toRightOf="@id/asosiy"
+        app:layout_constraintLeft_toLeftOf="@id/asosiy"
+        app:layout_constraintBottom_toTopOf="@id/summatxt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        />
+
+        <TextView
+            android:id="@+id/summatxt"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:text="5000"
+            android:textColor="@color/qora"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="@id/aylana"
+            app:layout_constraintLeft_toLeftOf="@id/aylana"
+            app:layout_constraintTop_toTopOf="@id/aylana"
+            android:layout_marginBottom="180dp"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints"
+            android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/disttxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/roundda"
         android:text="@string/_0_km"
-        android:textColor="@color/green"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.649"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.239" />
+        android:textColor="@color/qora"
+        android:textSize="30sp"
+        android:paddingRight="20dp"
+        android:gravity="right"
+        android:paddingLeft="20dp"
+        android:drawableStart="@drawable/mestada"
+        app:layout_constraintTop_toBottomOf="@id/aylana"
+        app:layout_constraintRight_toRightOf="@id/asosiy"
+        app:layout_constraintLeft_toLeftOf="@id/asosiy"
+        tools:ignore="MissingConstraints,RtlCompat" />
 
-    <TextView
-        android:id="@+id/spedtxt"
+
+        <TextView
+            android:id="@+id/vaqttxt"
+            android:layout_width="214dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="00:00"
+            android:textColor="@color/qora"
+            android:textSize="30sp"
+            android:background="@drawable/roundda"
+            android:paddingRight="20dp"
+            android:gravity="right"
+            android:paddingLeft="20dp"
+            android:drawableStart="@drawable/soatchada"
+            app:layout_constraintTop_toBottomOf="@+id/disttxt"
+            app:layout_constraintRight_toRightOf="@id/asosiy"
+            app:layout_constraintLeft_toLeftOf="@id/asosiy"
+            android:layout_marginBottom="140dp"
+            tools:ignore="MissingConstraints,RtlCompat" />
+
+
+        <TextView
+        android:id="@+id/narx_km"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/speed"
-        android:textColor="@color/green"
-        android:textSize="22sp"
+        android:layout_marginTop="90dp"
+        android:gravity="center_horizontal"
+        android:text="1200 km/so'm"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintLeft_toLeftOf="@id/aylana"
+        app:layout_constraintRight_toRightOf="@id/aylana"
+        app:layout_constraintTop_toTopOf="@id/summatxt"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/summaT"
-        android:layout_width="118dp"
-        android:layout_height="45dp"
-        android:text="@string/summa"
-        android:textColor="@color/green"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.537" />
-
-    <TextView
-        android:id="@+id/summatxt"
-        android:layout_width="178dp"
-        android:layout_height="46dp"
-        android:text="@string/_5000_so_m"
-        android:textColor="@color/green"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.538" />
-
-    <TextView
-        android:id="@+id/distT"
+        android:id="@+id/narx_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/distance"
-        android:textColor="@color/green"
-        android:textSize="22sp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="360 min/so'm"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintLeft_toLeftOf="@id/aylana"
+        app:layout_constraintRight_toRightOf="@id/aylana"
+        app:layout_constraintTop_toTopOf="@id/narx_km"
+        tools:ignore="MissingConstraints" />
+
+
+        <View
+            android:id="@+id/oxiri"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:background="@drawable/aylana"
+            app:layout_constraintRight_toRightOf="@id/asosiy"
+            app:layout_constraintLeft_toLeftOf="@id/asosiy"
+            app:layout_constraintTop_toBottomOf="@+id/aylana"
+            android:layout_marginTop="80dp"/>
+        <View
+            android:id="@+id/km"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/oxir"
+            app:layout_constraintRight_toRightOf="@id/asosiy"
+            app:layout_constraintLeft_toLeftOf="@id/asosiy"
+            app:layout_constraintTop_toBottomOf="@+id/aylana"
+            app:layout_constraintBottom_toBottomOf="@+id/oxiri"/>
+        <TextView
+            android:id="@+id/oxirgi_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/oxiri"
+            app:layout_constraintRight_toRightOf="@id/oxiri"
+            app:layout_constraintTop_toTopOf="@id/oxiri"
+            app:layout_constraintBottom_toBottomOf="@id/oxiri"
+            android:text="3.8 km"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startbtn"
-        android:textColor="@color/green"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:background="@drawable/round_radius"
-        android:text="@string/start"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/oddiy"
+        android:gravity="center"
+        android:text="Start"
+        android:textColor="@color/qora"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
 
     <TextView
         android:id="@+id/speedtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="264dp"
+        android:layout_marginBottom="628dp"
         android:text="@string/_0_km_s"
         android:textColor="@color/green"
-        android:textSize="22sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/vaqtT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/vaqt"
-        android:textColor="@color/green"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.431" />
-
-    <TextView
-        android:id="@+id/vaqttxt"
-        android:layout_width="145dp"
-        android:layout_height="39dp"
-        android:text="00:00"
-        android:textColor="@color/green"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.42" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/stopbtn"
-        android:textColor="@color/green"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:background="@drawable/round_radius"
-        android:text="@string/stop"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/oddiy"
+        android:gravity="center"
+        android:text="Finish"
+        android:visibility="gone"
+        android:textColor="@color/qora"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
 
-    <View
-        android:id="@+id/view10"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@drawable/ic_qale"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/callphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_radius"
-        android:text="Call Number"
-        android:textColor="@color/green"
-        app:layout_constraintBottom_toBottomOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:background="@drawable/round_yellow"
+        android:drawableRight="@drawable/ic_baseline_local_phone_24"
+        android:text="Mijoz bilan bog'lanish"
+        android:textColor="@color/qora"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@id/chap_gui"
+        app:layout_constraintLeft_toLeftOf="@id/ong_gui"
+        tools:ignore="MissingConstraints,RtlCompat" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buyurtmalarga"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:text="Buyurtmalarga qaytish"
+        android:paddingRight="30dp"
+        android:paddingLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/round_yellow"
+        android:drawableEnd="@drawable/ic_baseline_arrow_back_24"
+        android:textColor="@color/qora"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@id/chap_gui"
+        app:layout_constraintLeft_toLeftOf="@id/ong_gui"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

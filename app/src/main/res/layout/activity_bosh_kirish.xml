@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bosh_back"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".10"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bot_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".90"/>
+
+    <View
+        android:id="@+id/logo_view"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/logoda"
+        app:layout_constraintLeft_toLeftOf="@id/left_gui"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:text="Biz bilan hamkorlik qiling va qulay pul toping!"
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="@+id/left_gui"
+        app:layout_constraintTop_toTopOf="@+id/logo_view"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/moshin_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/moshina"
+        app:layout_constraintRight_toRightOf="@id/right_gui"
+        app:layout_constraintLeft_toLeftOf="@id/left_gui"
+        app:layout_constraintTop_toTopOf="@id/top_gui"
+        app:layout_constraintBottom_toBottomOf="@id/bot_gui"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kirish_btn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_yellow"
+        android:layout_marginTop="250dp"
+        android:text="Kirish"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/moshin_image"
+        app:layout_constraintLeft_toLeftOf="@id/left_gui"
+        app:layout_constraintRight_toRightOf="@id/right_gui"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reg_btn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_sorcle"
+        android:text="Ro'yhatdan o'tish"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/kirish_btn"
+        app:layout_constraintLeft_toLeftOf="@id/left_gui"
+        app:layout_constraintRight_toRightOf="@id/right_gui"
+        app:layout_constraintBottom_toBottomOf="@id/bot_gui"/>
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tag_taxi"
+        app:layout_constraintTop_toTopOf="@id/bot_gui"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

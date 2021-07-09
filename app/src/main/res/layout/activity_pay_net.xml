@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payNet">
+    tools:context=".ui.payNet"
+    android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/qora"
-        tools:context=".MainActivity"
+        tools:context=".MainActivity1"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="57dp">
 
@@ -43,6 +44,8 @@
             android:hint="@string/card_number"
             android:inputType="phone"
             android:padding="16dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/green"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintHorizontal_bias="0.504"
@@ -65,6 +68,8 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="16dp"
+            android:textColor="@color/green"
+            android:textColorHint="@color/green"
             app:layout_constraintHorizontal_bias="0.425"
             app:layout_constraintLeft_toLeftOf="@id/phonnumber"
             app:layout_constraintRight_toRightOf="@id/phonnumber"

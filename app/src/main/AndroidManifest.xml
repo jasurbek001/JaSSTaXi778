@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -18,19 +18,43 @@
         android:theme="@style/Theme.JaSSTaXi"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
-        <activity android:name=".AsosiyQism" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Malumotlar" android:screenOrientation="portrait"/>
-        <activity android:name=".TarxiBuyurtma" android:screenOrientation="portrait"/>
-        <activity android:name=".Settings" android:screenOrientation="portrait"/>
-        <activity android:name=".forgotPassword" android:screenOrientation="portrait"/>
-        <activity android:name=".Buyurtma" android:screenOrientation="portrait"/>
-        <activity android:name=".CityOyna" android:screenOrientation="portrait" />
-        <activity android:name=".payNet" android:screenOrientation="portrait"/>
-        <activity android:name=".TaksoMetr" android:screenOrientation="portrait"/>
-        <activity android:name=".RegisterOyna" android:screenOrientation="portrait"/>
-        <activity android:name=".BoshOyna" android:screenOrientation="portrait" />
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name=".ui.Verify"></activity>
+        <activity
+            android:name=".ui.AsosiyQism"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".models.Malumotlar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TarxiBuyurtma"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.forgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Buyurtma"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CityOyna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payNet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TaksoMetr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RegisterOyna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BoshOyna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

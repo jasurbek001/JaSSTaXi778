@@ -4,232 +4,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CityOyna">
+    tools:context=".ui.CityOyna"
+    android:background="@drawable/bosh_back">
 
-    <ImageView
-        android:id="@+id/tepaView"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/ic_qale"
-        app:layout_constraintBottom_toTopOf="@id/scroll"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
-        android:id="@+id/scroll"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/pastView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tepaView">
+        android:layout_height="match_parent"
+        android:id="@+id/constr_city">
+    <include
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="-75dp"
+        tools:layout_editor_absoluteY="-96dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-
-
-            <androidx.constraintlayout.widget.Guideline
+    <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guidVer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.15" />
+                app:layout_constraintGuide_percent="0.1" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guidVer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.85" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidHor"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidBot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.85" />
-
-            <Button
-                android:id="@+id/shaharbtn2"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="Namangan Shahar"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/guidVer1"
-                app:layout_constraintRight_toRightOf="@id/guidVer2"
-                app:layout_constraintTop_toBottomOf="@id/guidHor" />
-
-            <Button
-                android:id="@+id/chustbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="CHUST"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/shaharbtn2"
-                app:layout_constraintRight_toRightOf="@id/shaharbtn2"
-                app:layout_constraintTop_toBottomOf="@id/shaharbtn2" />
-
-            <Button
-                android:id="@+id/popbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="POP SHAHRI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/chustbtn"
-                app:layout_constraintRight_toRightOf="@id/chustbtn"
-                app:layout_constraintTop_toBottomOf="@id/chustbtn" />
-
-            <Button
-                android:id="@+id/toraqorgon_btn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="TO'RAQO'RG'ON"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/popbtn"
-                app:layout_constraintRight_toRightOf="@id/popbtn"
-                app:layout_constraintTop_toBottomOf="@id/popbtn" />
-
-            <Button
-                android:id="@+id/mingbuloqbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="MINGBULOQ"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/toraqorgon_btn"
-                app:layout_constraintRight_toRightOf="@id/toraqorgon_btn"
-                app:layout_constraintTop_toBottomOf="@id/toraqorgon_btn" />
-
-            <Button
-                android:id="@+id/yangiqorgon_btn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="YANGIQO'RG'ON"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/mingbuloqbtn"
-                app:layout_constraintRight_toRightOf="@id/mingbuloqbtn"
-                app:layout_constraintTop_toBottomOf="@id/mingbuloqbtn" />
-
-            <Button
-                android:id="@+id/uychi_btn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="UYCHI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/yangiqorgon_btn"
-                app:layout_constraintRight_toRightOf="@id/yangiqorgon_btn"
-                app:layout_constraintTop_toBottomOf="@id/yangiqorgon_btn" />
+                app:layout_constraintGuide_percent="0.9" />
 
 
-            <Button
-                android:id="@+id/chortoq_btn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="CHORTOQ"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/uychi_btn"
-                app:layout_constraintRight_toRightOf="@id/uychi_btn"
-                app:layout_constraintTop_toBottomOf="@id/uychi_btn" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shaharbtn2"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="Namangan Shahar"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/guidVer1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/uchqorgon"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="UCHQO'RG'ON"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/chortoq_btn"
-                app:layout_constraintRight_toRightOf="@id/chortoq_btn"
-                app:layout_constraintTop_toBottomOf="@id/chortoq_btn" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chustbtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="CHUST"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintRight_toRightOf="@id/guidVer2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/namanganTbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="NAMANGAN TUMANI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/uchqorgon"
-                app:layout_constraintRight_toRightOf="@id/uchqorgon"
-                app:layout_constraintTop_toBottomOf="@id/uchqorgon" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/popbtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="POP SHAHRI"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/shaharbtn2"
+        app:layout_constraintTop_toTopOf="@+id/shaharbtn2" />
 
-            <Button
-                android:id="@+id/davlatobodbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="DAVLATOBOD TUMANI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/namanganTbtn"
-                app:layout_constraintRight_toRightOf="@id/namanganTbtn"
-                app:layout_constraintTop_toBottomOf="@id/namanganTbtn" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toraqorgon_btn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="TO'RAQO'RG'ON"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintRight_toRightOf="@id/chustbtn"
+        app:layout_constraintTop_toTopOf="@id/chustbtn" />
 
-            <Button
-                android:id="@+id/kosonsoybtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="KOSONSOY TUMANI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/davlatobodbtn"
-                app:layout_constraintRight_toRightOf="@id/davlatobodbtn"
-                app:layout_constraintTop_toBottomOf="@id/davlatobodbtn" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mingbuloqbtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="MINGBULOQ"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/popbtn"
+        app:layout_constraintTop_toTopOf="@id/popbtn" />
 
-            <Button
-                android:id="@+id/norinbtn"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:background="@drawable/round_radius"
-                android:text="NORIN TUMANI"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="@id/kosonsoybtn"
-                app:layout_constraintRight_toRightOf="@id/kosonsoybtn"
-                app:layout_constraintTop_toBottomOf="@id/kosonsoybtn" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/yangiqorgon_btn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="YANGIQO'RG'ON"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintRight_toRightOf="@id/toraqorgon_btn"
+        app:layout_constraintTop_toTopOf="@id/toraqorgon_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uychi_btn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="UYCHI"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/mingbuloqbtn"
+        app:layout_constraintTop_toTopOf="@id/mingbuloqbtn" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chortoq_btn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="CHORTOQ"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/yangiqorgon_btn"
+        app:layout_constraintTop_toTopOf="@id/yangiqorgon_btn" />
 
-    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uchqorgon"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="UCHQO'RG'ON"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/uychi_btn"
+        app:layout_constraintTop_toTopOf="@id/uychi_btn" />
 
-    <ImageView
-        android:id="@+id/pastView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/ic__"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/namanganTbtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="NAMANGAN TUMANI"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/chortoq_btn"
+        app:layout_constraintTop_toTopOf="@id/chortoq_btn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kosonsoybtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="KOSONSOY TUMANI"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/uchqorgon"
+        app:layout_constraintTop_toTopOf="@+id/uchqorgon" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/norinbtn"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/cityga"
+        android:text="NORIN TUMANI"
+        android:textColor="@color/qora"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@+id/namanganTbtn"
+        app:layout_constraintTop_toTopOf="@+id/namanganTbtn" />
+
+    <View
+        android:id="@+id/takso"
+        android:layout_width="87dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scroll"
-        tools:ignore="MissingConstraints" />
+        android:background="@drawable/speed"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/menu_bosh"
+        android:visibility="gone"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menyu"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".3"
+        android:id="@+id/huidleft"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".4"
+        android:id="@+id/huidright"/>
+    <View
+        android:id="@+id/bosh"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/huidleft"
+        android:background="@drawable/tort"
+        android:alpha="0.8"
+        />
+
+    <TextView
+        android:id="@+id/til_ozgar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:drawableStart="@drawable/til"
+        android:text="   Dastur tili"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidright"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <TextView
+        android:id="@+id/ism_familiya_txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:drawableStart="@drawable/dispetcher"
+        android:text="   Dispetcherlar"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidright"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <TextView
+        android:id="@+id/chiqish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:drawableStart="@drawable/chiqish"
+        android:text="   Chiqish"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidright"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <TextView
+        android:id="@+id/istoriya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:drawableStart="@drawable/soat"
+        android:text="   Buyurtmalar tarixi"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidright"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <TextView
+        android:id="@+id/taksometr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:drawableStart="@drawable/taxo_png"
+        android:text="     Taksometr"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidright"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <TextView
+        android:id="@+id/ism_familiya_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Erkinov Sanjar"
+        android:textColor="@color/oq"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/huidleft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="130dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/odam"
+        app:layout_constraintLeft_toLeftOf="@id/huidleft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/shaxsiy_kab"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_sorcle"
+        android:text="Shaxsiy kabinet"
+        android:textSize="8sp"
+        app:backgroundTint="#FFCC19"
+        app:layout_constraintLeft_toLeftOf="@id/huidleft"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ism_familiya_txt"
+        />
+
+    <View
+        android:id="@+id/chiqish_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/qaytish"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
